@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$fk-$5qlhd94_f!w6_%gb=i7l1p#z+xs(#6d9y$(++9e7q$t46
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'social_django', #Social apps here
     'core',
+    'django_extensions',
+    'sslserver',
     
 ]
 
@@ -59,8 +61,8 @@ ROOT_URLCONF = 'UM.urls'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = 'home'
-SOCIAL_AUTH_FACEBOOK_KEY = '843366623315817'  # App ID
-SOCIAL_AUTH_FACEBOOK_SECRET = 'c31d2941043ef25a38ce0e276a496f85 '  # App Secret
+SOCIAL_AUTH_FACEBOOK_KEY = '773512897186169'  # App ID
+SOCIAL_AUTH_FACEBOOK_SECRET = '60fb8ce0d64ed1160e286947333bf647'  # App Secret
 
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.facebook.FacebookOAuth2',
@@ -96,7 +98,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'UM',
         'USER': 'root',
-        'PASSWORD': 'root',
+        'PASSWORD': 'root123',
         'HOST': 'localhost',  
         'PORT': '3306',
     }
